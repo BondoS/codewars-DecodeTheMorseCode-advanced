@@ -6,7 +6,7 @@ var decodeBits = function(bits){
     do {
         // Regex matches (zeros) like 101 or 1001 or 10001 etc.
         regexZeros = '10{'+i+'}1';
-        // Regex matches (ones) like 10|010|01 or 110|0110|110 or 1110|01110|1110 etc.
+        // Regex matches (ones) like 10|010|01 or 110|0110|011 or 1110|01110|0111 etc.
         regexOnes = '^1{'+ i +'}0|01{' + i + '}0|01{'+ i +'}$';
         // There isn't any zeros, so there isn't any time unit, it is just a bunch of ones.
         if(!/0/.test(bits)){
